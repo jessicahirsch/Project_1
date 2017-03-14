@@ -1,0 +1,172 @@
+html {
+  background-image: url("JEJZjC8.png");
+  background-size: cover;
+}
+
+.start {
+  display: inline-block;
+  border: 3px solid black;
+  height: 100px;
+  width: 100px;
+  margin-left: 50px;
+}
+
+.playerOne {
+  display: block;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  background-color: black;
+  margin-left: 70px;
+}
+
+.playerTwo {
+  display: block;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  background-color: black;
+  margin-left: 70px;
+}
+
+.box1 {
+  display: inline-block;
+  background-color: red;
+  height: 80px;
+  width: 80px;
+}
+
+.box2 {
+  display: inline-block;
+  background-color: purple;
+  height: 80px;
+  width: 80px;
+}
+
+.box3 {
+  display: inline-block;
+  background-color: yellow;
+  height: 80px;
+  width: 80px;
+}
+
+.box4 {
+  display: inline-block;
+  background-color: blue;
+  height: 80px;
+  width: 80px;
+}
+
+.box5 {
+  display: inline-block;
+  background-color: orange;
+  height: 80px;
+  width: 80px;
+}
+
+.box6 {
+  display: inline-block;
+  background-color: green;
+  height: 80px;
+  width: 80px;
+}
+
+.box7 {
+  display: inline-block;
+  background-color: red;
+  height: 80px;
+  width: 80px;
+}
+
+.box8 {
+  display: inline-block;
+  background-color: purple;
+  height: 80px;
+  width: 80px;
+}
+
+.box9 {
+  display: inline-block;
+  background-color: yellow;
+  height: 80px;
+  width: 80px;
+}
+
+.box10 {
+  display: inline-block;
+  background-color: blue;
+  height: 80px;
+  width: 80px;
+}
+
+ .box11 {
+  display: inline-block;
+  background-color: orange;
+  height: 80px;
+  width: 80px;
+ }
+
+.box12 {
+  display: inline-block;
+  background-color: green;
+  height: 80px;
+  width: 80px;
+}
+
+.cards {
+  background-color: white;
+  border: 3px solid black;
+  margin-left: 300px;
+  margin-top: 200px;
+  height: 160px;
+  width: 240px;
+  transform: rotate(90deg);
+}
+
+.flip-container {
+  perspective: 1000px;
+  margin-top: 100px;
+  margin-left: 500px;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 160px;
+  height: 240px;
+}
+
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  background-image: url('http://orig05.deviantart.net/8d46/f/2012/083/d/d/dd2a7bfab865239dfcabb22c6065061e-d4tsolk.png');
+  background-size: cover;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: white;
+}
