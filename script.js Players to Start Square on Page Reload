@@ -1,0 +1,89 @@
+console.log('script loaded.')
+
+var playerOne = document.querySelector('.playerOne');
+var playerTwo = document.querySelector('.playerTwo');
+var start = document.querySelector('.start');
+var deck = document.getElementsByClassName('deck');
+var container = document.getElementsByClassName('boardContainer');
+
+var cardArray = [];
+cardArray.push('.card1', '.card2', '.card3', '.card4', '.card5', '.card6');
+cardArray = [".card1", ".card2", ".card3", ".card4", ".card5", ".card6"];
+
+var numOfPlayers = 2;
+
+var playerArray = [];
+playerArray.push('.playerOne');
+playerArray.push('.playerTwo');
+playerArray = ['.playerOne', '.playerTwo'];
+
+
+var gameStart = function() {
+  // Move players to start square
+  start.append(playerOne);
+  start.append(playerTwo);
+}
+
+gameStart();
+
+window.onload = function() {
+  gameStart();
+};
+
+boardContainer.addEventListener('click', findClick, false);
+// Moving the pieces to the mouse click
+
+function getPosition(el) {
+  var xPos = 0;
+  var yPos = 0;
+
+document.onclick = move;
+
+function movePlayer(x, y) {
+  playerArray = ['.playerOne', '.playerTwo'];
+  $(this.playerArray);
+    var position = {
+        x: -10,
+        y: 10
+    };
+}
+
+makePlayerPiece();
+
+var div = document.createElement('div');
+$('body').append(div);
+
+
+var deckFlip = function(deck) {
+// Flip top card on user click
+// Call on function to flip the next card and so on
+// deck.onclick = function(event) {
+//   console.log("im working!")
+//   }
+}
+
+deckFlip();
+
+var flip = function() {
+// $(card).flip({
+//   axis: 'y',
+//   trigger: 'click'
+// });
+}
+
+flip();
+
+var movePlayer = function() {
+  // If/else statement to determine the movement of player based off of
+  // cards flipped
+}
+
+var checkWinner = function() {
+  // Check after each movement to see if player has reached Kandy Kastle
+
+}
+
+var shuffleDeck = function() {
+  // Randomize deck and put on infinite loop
+}
+
