@@ -1,0 +1,183 @@
+console.log('script loaded.')
+
+var playerOne = document.querySelector('.playerOne');
+// var playerTwo = document.querySelector('.playerTwo');
+var start = document.querySelector('.start');
+var container = document.querySelector('.boardContainer');
+var end = document.querySelector('.end');
+
+// var x = event.clientX;
+// var y = event.clientY;
+// var currentCoordinates = 'X: ' + 'Y: ';
+
+var card1 = document.querySelector('.card1');
+var card2 = document.querySelector('.card2');
+var card3 = document.querySelector('.card3');
+var card4 = document.querySelector('.card4');
+var card5 = document.querySelector('.card5');
+var card6 = document.querySelector('.card6');
+var card7 = document.querySelector('.card7');
+
+var cardArray = [];
+cardArray.push(card1, card2, card3, card4, card5, card6, card7);
+
+var numOfPlayers = 1;
+
+var playerArray = [];
+playerArray.push('.playerOne');
+// playerArray.push('.playerTwo');
+// playerArray = ['.playerOne', '.playerTwo'];
+
+
+// Move players to start square
+var gameStart = function() {
+  var start = document.querySelector('.start');
+  var playerOne = document.querySelector('.playerOne');
+  // var playerTwo = document.querySelector('.playerTwo');
+  start.append(playerOne);
+  // start.append(playerTwo);
+}
+
+gameStart();
+
+window.onload = function() {
+  gameStart();
+};
+
+  $('.card').click(function(event){
+    let cardNum = event.target.className.split('')[4];
+    console.log(event)
+    // $(this).addClass('flipped');
+
+    $(this).addClass('card'+cardNum+'-flipped');
+  })
+
+// $('.flipped').click(function() {
+// $(cards).flipped({
+//   axis: 'y',
+//   trigger: 'click'
+// });
+// });
+
+// flip();
+
+// Randomize cards after each flip
+
+var container = document.querySelector('.boardContainer');
+container.addEventListener('click', getCurrentPosition, false);
+
+function getCurrentPosition(e) {
+    var parentPosition = getPosition(e.currentTarget);
+    var xPosition = e.clientX - parentPosition.x - (playerOne.clientWidth / 2);
+    var yPosition = e.clientY - parentPosition.y - (playerOne.clientHeight / 2);
+
+    playerOne.style.left = xPosition + 'px';
+    playerOne.style.top = yPosition + 'px';
+}
+
+function getPosition(el) {
+  var xPos = 0;
+  var yPos = 0;
+
+  while (el) {
+    if (el.tagName == 'body') {
+      var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
+      var yScroll = el.scrollTop || document.documentElement.scrollTop;
+
+      xPos += (el.offsetLeft - xScroll + el.clientLeft);
+      yPos += (el.offsetTop - yScroll + el.clientTop);
+    } else {
+      xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+      yPos += (el.offsetTop - el.scrollTop + el.clientTop);
+    }
+
+    el = el.offsetParent;
+  }
+  return {
+    x: xPos,
+    y: yPos
+  };
+}
+
+// Remove player between turns
+// start.remove(playerOne);
+
+// // // Moving the pieces to the mouse click
+
+// function getCurrentPosition(el) {
+//   var parentPosition = getPosition(container)
+//   var xPosition = e.clientX - parentPosition.x - (theThing.clientWidth / 2);
+//   var yPosition = e.clientY - parentPosition.y - (theThing.clientHeight / 2);
+
+// theThing.style.left = xPosition + "px";
+// theThing.style.top = yPosition + "px";
+// }
+
+// function getPosition(el) {
+//   var xPos = 0;
+//   var yPos = 0;
+// }
+
+//   while (el) {
+//     if (el.tagName == "BODY") {
+//       // deal with browser quirks with body/window/document and page scroll
+//       var xScrollPos = el.scrollLeft || document.documentElement.scrollLeft;
+//       var yScrollPos = el.scrollTop || document.documentElement.scrollTop;
+
+//       xPosition += (el.offsetLeft - xScrollPos + el.clientLeft);
+//       yPosition += (el.offsetTop - yScrollPos + el.clientTop);
+//     } else {
+//       xPosition += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+//       yPosition += (el.offsetTop - el.scrollTop + el.clientTop);
+//     }
+
+//     el = el.offsetParent;
+//   }
+//   console.log({
+//     x: xPosition,
+//     y: yPosition
+//   });
+
+// getCurrentPosition();
+
+// document.onclick = move;
+
+// function movePlayer(x, y) {
+//   playerArray = ['.playerOne', '.playerTwo'];
+//   $(this.playerArray);
+//     var position = {
+//         x: -10,
+//         y: 10
+//     };
+// }
+
+// makePlayerPiece();
+
+// var div = document.createElement('div');
+// $('body').append(div);
+
+
+// var deckFlip = function(deck) {
+// // Flip top card on user click
+// // Call on function to flip the next card and so on
+// // deck.onclick = function(event) {
+// //   console.log("im working!")
+// //   }
+// }
+
+// deckFlip();
+
+
+// var movePlayer = function() {
+//   // If/else statement to determine the movement of player based off of
+//   // cards flipped
+// }
+
+// var checkWinner = function() {
+//   // Check after each movement to see if player has reached Kandy Kastle
+
+// }
+
+// var shuffleDeck = function() {
+//   // Randomize deck and put on infinite loop
+// }
