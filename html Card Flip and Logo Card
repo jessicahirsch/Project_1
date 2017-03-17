@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="boardContainer">
+    <span class="playerOne players">1</span>
+    <!-- <span class="playerTwo players">2</span> -->
+      <div class="start box"></div>
+      <div class="box1 box"></div>
+      <div class="box2 box"></div>
+      <div class="box3 box"></div>
+      <div class="box4 box"></div>
+      <div class="box5 box"></div>
+      <div class="box6 box"></div>
+      <div class="box7 box"></div>
+      <div class="box8 box"></div>
+      <div class="box9 box"></div>
+      <div class="box10 box"></div>
+      <div class="box11 box"></div>
+      <div class="box12 box"></div>
+      <div class="end box"></div>
+      <div class="logoCard"></div>
+      <div class="card"></div>
+          <!-- <div class="card2 card"></div> -->
+          <!-- <div class="card3 card"></div> -->
+          <!-- <div class="card4 card"></div> -->
+          <!-- <div class="card5 card"></div> -->
+          <!-- <div class="card6 card"></div> -->
+          <!-- <div class="card7 card"></div> -->
+  </div>
+</body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</html>
